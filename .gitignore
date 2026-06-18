@@ -1,0 +1,8 @@
+# Backend (Spring Boot)
+notesapp_backend/.idea
+notesapp_backend/src/main/resources/application.properties
+
+
+# Frontend (React/Vite)
+notesapp_frontend/node_modules/
+notesapp_frontend/dist/
