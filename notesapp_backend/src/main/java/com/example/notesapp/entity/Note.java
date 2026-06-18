@@ -1,6 +1,8 @@
 package com.example.notesapp.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "notes")
@@ -10,8 +12,12 @@ public class Note {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+
+    @NotBlank(message = "Title cannot be empty")
+    @Size(max = 100, message = "Title cannot exceed 100 characters")
     private String title;
 
+    @NotBlank(message = "Content cannot be empty")
     private String content;
 
     private String tags;

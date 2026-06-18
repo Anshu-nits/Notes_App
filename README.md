@@ -29,6 +29,8 @@ The application consists of a React frontend and a Spring Boot backend communica
 * Spring Boot
 * Spring Web
 * Spring Data JPA
+* Bean Validation (Jakarta Validation)
+* Global Exception Handling
 * Hibernate
 * MySQL
 
@@ -49,14 +51,36 @@ The application consists of a React frontend and a Spring Boot backend communica
 
 ### Backend
 
+### Backend
+
 ```text
 backend/
-├── controller/
-├── service/
-├── repository/
-├── entity/
-├── Application.java
-└── application.properties
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── example/
+│   │   │           └── notesapp/
+│   │   │               ├── controller/
+│   │   │               │   └── NoteController.java
+│   │   │               ├── service/
+│   │   │               │   └── NoteService.java
+│   │   │               ├── repository/
+│   │   │               │   └── NoteRepository.java
+│   │   │               ├── entity/
+│   │   │               │   └── Note.java
+│   │   │               ├── exception/
+│   │   │               │   └── GlobalExceptionHandler.java
+│   │   │               └── NotesappApplication.java
+│   │   │
+│   │   └── resources/
+│   │       └── application.properties
+│   │
+│   └── test/
+│       └── java/
+│
+├── pom.xml
+└── README.md
 ```
 
 ### Frontend
@@ -199,7 +223,7 @@ GET /api/notes/search?tag=java
    * Title
    * Content
    * Tags
-5. The application is intended for local development and demonstration purposes.
+5. The application is intended for local development and demonstration.
 
 ---
 
