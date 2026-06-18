@@ -223,7 +223,7 @@ GET /api/notes/search?tag=java
    * Title
    * Content
    * Tags
-5. The application is intended for local development and demonstration.
+5. The application is intended for local development and demonstration purpose.
 
 ---
 
